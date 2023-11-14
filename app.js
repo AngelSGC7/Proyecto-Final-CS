@@ -7,20 +7,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
- //agregar fotos y meterle el login y repasar cosas como las flechas el innerhtml y appendChild y repasar codigo aparte de agregar estilos//
     const pokemonData = [
-        {id: 143, name: "Snorlax", type: "Normal" },
-        {id: 133, name: "Eevee", type: "Normal" },
-        {id: 428, name: "Lopunny", type: "Normal/Lucha" },
-        {id: 1, name: "Bulbasaur", type: "Planta/Veneno" },
-        {id: 3, name: "Venusaur", type: "Planta/Veneno" },
-        {id: 470, name: "Leafeon", type: "Planta" },
-        {id: 4, name: "Charmander", type: "Fuego" },
-        {id: 59, name: "Arcanine", type: "Fuego" },
-        {id: 6, name: "Charizard", type: "Fuego/Volador" },
-        {id: 7, name: "Squirtle", type: "Agua" },
-        {id: 9, name: "Blastoise", type: "Agua" },
-        {id: 130, name: "Gyarados", type: "Agua" },
+        {id: 143, name: "Snorlax", type: "Normal", image: "Snorlax.png" },
+        {id: 133, name: "Eevee", type: "Normal", image: "eeve.webp" },
+        {id: 428, name: "Lopunny", type: "Normal", image: "Lopunny.png" },
+        {id: 1, name: "Bulbasaur", type: "Planta", image: "bulbasur.png" },
+        {id: 3, name: "Venusaur", type: "Planta", image: "venusaur.png" },
+        {id: 470, name: "Leafeon", type: "Planta", image: "leafeon.png" },
+        {id: 4, name: "Charmander", type: "Fuego", image: "charmander.png" },
+        {id: 59, name: "Arcanine", type: "Fuego", image: "arcanine.png" },
+        {id: 6, name: "Charizard", type: "Fuego", image: "charizard.png" },
+        {id: 7, name: "Squirtle", type: "Agua", image: "squirtle.png" },
+        {id: 9, name: "Blastoise", type: "Agua", image: "blastoise.png" },
+        {id: 130, name: "Gyarados", type: "Agua", image: "gyarados.png" },
     ];
 
 
@@ -51,9 +50,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const pokemonCard = document.createElement("div");
             pokemonCard.className = "pokemon-card";
             pokemonCard.innerHTML = `
-                <p><strong>ID:</strong> ${pokemon.id}</p>
-                <p><strong>Nombre:</strong> ${pokemon.name}</p>
-                <p><strong>Tipo:</strong> ${pokemon.type}</p>
+            <img src="${pokemon.image}" alt="${pokemon.name}">
+            <p><strong>ID:</strong> ${pokemon.id}</p>
+            <p><strong>Nombre:</strong> ${pokemon.name}</p>
+            <p><strong>Tipo:</strong> ${pokemon.type}</p>
             `;
             pokemonInfoDiv.appendChild(pokemonCard);
         });
