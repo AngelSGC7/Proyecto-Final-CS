@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <title>Pokedex</title>
+</head>
+<body>
+
+    <section class="pokedex" id="pokedex">
+        <h2>Pokedex</h2>
+    </section>
+
+    <section class="searchPokes">
+        <input type="text" id="searchInput" placeholder="Buscar por nombre">
+        <select id="typeFilter">
+            <option value="">Todos los tipos</option>
+            <option value="Normal">Normal</option>
+            <option value="Planta">Planta</option>
+            <option value="Fuego">Fuego</option>
+            <option value="Agua">Agua</option>
+        </select>
+        <button id="searchBtn">Buscar</button>
+        <div id="pokemonInfo"></div>
+    </section>
+
+</body>
+</html>
